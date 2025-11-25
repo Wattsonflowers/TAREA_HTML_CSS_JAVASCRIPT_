@@ -1,128 +1,352 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tecnologías Emergentes 02/2025</title>
-    <link rel="stylesheet" href="tarea css horarios.css">
+    <title>Tecnologías Emergentes</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        let nombre = " Wilson";
+        alert("Hola" + nombre + ", Bienvenido al curso de JavaScript");
+    </script>
+
+    <style>
+        td.materia {
+            width: 30px;
+            height: 40px;
+            transition: transform 0.4s;
+            cursor: pointer;
+        }
+
+        td.dia {
+            width: 30px;
+            height: 40px;
+            cursor: pointer;
+            transition:
+                transform 0.2s ease-in-out,
+                background-color 0.3s ease-in-out,
+                box-shadow 0.3s ease-in-out;
+        }
+
+        .oscuro {
+            background-color: black;
+            color: rgb(43, 226, 217);
+        }
+
+        #ciudad {
+            padding: 4px;
+            transition:
+                transform 0.2s ease-in-out,
+                box-shadow 0.3s ease-in-out,
+                border-color 0.3s ease-in-out;
+        }
+
+        #ciudad:focus {
+            outline: none;
+            transform: scale(1.05);
+            border: 2px solid #00bcd4;
+            box-shadow: 0 0 8px #00bcd4;
+        }
+
+        #infoCiudad {
+            margin-top: 5px;
+            font-weight: bold;
+            opacity: 0;
+            transition: opacity 0.4s ease-in-out;
+        }
+
+        #infoCiudad.visible {
+            opacity: 1;
+        }
+    </style>
 </head>
 
 <body>
-    <!-- Barra de navegación -->
+
     <nav>
-        <ul>
-            <li><a href="#sec1">Nombres y Apellidos</a></li>
-            <li><a href="#sec2">Horarios</a></li>
-            <li><a href="#sec3">Formularios</a></li>
-            <li><a href="#sec4">Datos Extra</a></li>
-        </ul>
+        <a href="#sec1">Nombres y Apellidos</a>
+        <a href="#sec2">Horarios</a>
+        <a href="#sec3">Formularios</a>
+        <a href="#sec4">Datos Extras</a>
     </nav>
 
-    <main>
-        <h1>TECNOLOGÍAS EMERGENTES 02/2025</h1>
+    <hr>
 
-        <!-- Sección 1 -->
-        <section id="sec1">
-            <h2>Datos personales</h2>
-            <p><strong>NOMBRES:</strong> <ins>Wilson Ariel</ins></p>
-            <p><strong>APELLIDOS:</strong> <del>Flores Flores</del></p>
-            <p><strong>SEMESTRE:</strong> <ins>4° Semestre</ins></p>
-            <p><strong>Fecha de Nacimiento:</strong> <ins>02/10/2005</ins></p>
-            <p><strong>Universidad:</strong> Universidad Autónoma Tomás Frías</p>
-            <p><strong>Carrera:</strong> Ingeniería de Sistemas</p>
-        </section>
+    <h3 id="sec1">S1 - Nombres y Apellidos</h3>
 
-        <!-- Sección 2 -->
-        <section id="sec2">
-            <h2 c>Horarios</h2>
-            <table borde>
-                <thead>
-                    <tr>
-                        <th>Horario</th>
-                        <th>Lunes</th>
-                        <th>Martes</th>
-                        <th>Miércoles</th>
-                        <th>Jueves</th>
-                        <th>Viernes</th>
-                    </tr>
-                </thead>
-                <td>
-                    <tr><td>07:45-08:30</td><td></td><td></td><td></td><td class="sis415">SIS415</td><td></td></tr>
-                    <tr><td>08:30-09:15</td><td></td><td></td><td></td><td class="sis415">SIS415</td><td></td></tr>
-                    <tr><td>09:15-10:00</td><td></td><td></td><td></td><td class="sis415">SIS415</td><td></td></tr>
-                    <tr><td>10:00-10:45</td><td></td><td class="sis443">SIS443</td><td class="sis421">SIS421</td><td class="sis414">SIS414</td><td></td></tr>
-                    <tr><td>10:45-11:30</td><td></td><td class="sis443">SIS443</td><td class="sis421">SIS421</td><td class="sis414">SIS414</td><td></td></tr>
-                    <tr><td>11:30-12:15</td><td></td><td class="sis443">SIS443</td><td class="sis421">SIS421</td><td></td><td></td></tr>
-                    <tr><td>14:00-14:45</td><td></td><td></td><td class="sis416">SIS416</td><td></td><td></td></tr>
-                    <tr><td>14:45-15:30</td><td></td><td></td><td class="sis416">SIS416</td><td></td><td></td></tr>
-                    <tr><td>15:30-16:15</td><td></td><td></td><td class="sis416">SIS416</td><td></td><td></td></tr>
-                    <tr><td>16:15-17:00</td><td class="sis415">SIS415</td><td class="sis414">SIS414</td><td class="sis414">SIS414</td><td class="sis443">SIS443</td><td></td></tr>
-                    <tr><td>17:00-17:45</td><td class="sis415">SIS415</td><td class="sis414">SIS414</td><td class="sis414">SIS414</td><td class="sis443">SIS443</td><td></td></tr>
-                    <tr><td>17:45-18:30</td><td class="sis415">SIS415</td><td class="sis414">SIS414</td><td class="sis414">SIS414</td><td class="sis443">SIS443</td><td></td></tr>
-                    <tr><td>18:30-19:15</td><td class="sis420">SIS420</td><td class="sis416">SIS416</td><td class="sis420">SIS420</td><td class="sis421">SIS421</td><td></td></tr>
-                    <tr><td>19:15-20:00</td><td class="sis420">SIS420</td><td class="sis416">SIS416</td><td class="sis420">SIS420</td><td class="sis421">SIS421</td><td></td></tr>
-                    <tr><td>20:00-20:45</td><td class="sis420">SIS420</td><td class="sis416">SIS416</td><td class="sis420">SIS420</td><td class="sis421">SIS421</td><td></td></tr>
-                </td>
-            </table>
-        </section>
-   
-        <!-- Sección 3 -->
-        <section id="sec3" >
-            <h2 >Formulario</h2>
-            <form action="procesar.php" method="post">
-                <fieldset>
-                    <legend>Datos personales</legend>
+    <h1 id="titulo" align="center">
+        <tt>PRIMER PARCIAL TECNOLOGÍAS EMERGENTES 02/2025</tt>
+    </h1>
 
-                    <label>Nombre:
-                        <input type="text" name="nombre" placeholder="Tu nombre" required>
-                    </label>
+    <button onclick="cambiartexto()">Cambiar texto</button>
 
-                    <label>Apellidos:
-                        <input type="text" name="apellido" placeholder="Tus apellidos" required>
-                    </label>
+    <script>
+        function cambiartexto() {
+            const titulo = document.getElementById("titulo");
+            titulo.textContent = "Práctica #5 en JavaScript!";
+            titulo.style.color = "red";
+        }
+    </script>
 
-                    <label>Ciudad:</label>
-                    <input list="ciudades" id="ciudad" name="ciudad" placeholder="Escribe o selecciona">
-                    <datalist id="ciudades">
-                        <option value="La Paz"></option>
-                        <option value="Cochabamba"></option>
-                        <option value="Chuquisaca"></option>
-                        <option value="Santa Cruz"></option>
-                        <option value="Potosí"></option>
-                        <option value="Tarija"></option>
-                        <option value="Oruro"></option>
-                        <option value="Pando"></option>
-                        <option value="Beni"></option>
-                    </datalist>
+    <h2>NOMBRES: <ins>Wilson Ariel</ins></h2>
+    <h2>APELLIDOS: <del>Flores Flores</del></h2>
+    <h2>SEMESTRE: <del>4. SEMESTRE</del></h2>
 
-                    <label>Fecha:
-                        <input type="date">
-                    </label>
+ 
+    <h2 id="reloj" style="text-align:center; margin-top:15px; font-family:monospace;"></h2>
 
-                    <label>Hora:
-                        <input type="time">
-                    </label>
+    <script>
+        setInterval(() => {
+            const ahora = new Date();
+            document.getElementById("reloj").textContent =
+                "Hora actual: " + ahora.toLocaleTimeString();
+        }, 1000);
+    </script>
 
-                    <label>Email:
-                        <input type="email" name="email" placeholder="usuario@gmail.com" required>
-                    </label>
 
-                    <button type="submit">Enviar</button>
-                </fieldset>
-            </form>
-        </section>
-    
 
-        <!-- Sección 4 -->
-        <section id="sec4">
-            <h2>Otros datos</h2>
-            <p>Ingeniería de Sistemas - Sede Tupiza</p>
-        </section>
-    </main>
+    <h3 id="sec2">Horarios</h3>
 
-    <footer>
-        TODOS LOS DERECHOS RESERVADOS © 2025 <br>
-        Tecnologías Emergentes
+    <table border="1" cellspacing="0" cellpadding="5">
+        <tr align="center">
+            <td>Horas</td>
+            <td class="dia" bgcolor="#9900CC">Lunes</td>
+            <td class="dia">Martes</td>
+            <td class="dia" bgcolor="#9900CC">Miércoles</td>
+            <td class="dia">Jueves</td>
+            <td class="dia" bgcolor="#9900CC">Viernes</td>
+            <td class="dia">Sábado</td>
+            <td class="dia">Domingo</td>
+        </tr>
+
+        <tr>
+            <td>07:45-08:30</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="materia" bgcolor="red">SIS415</td>
+            <td></td>
+        </tr>
+
+        <tr>
+            <td>08:30-09:15</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="materia" bgcolor="red">SIS415</td>
+            <td></td>
+        </tr>
+
+        <tr>
+            <td>09:15-10:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="materia" bgcolor="red">SIS415</td>
+            <td></td>
+        </tr>
+
+        <tr>
+            <td>10:00-10:45</td>
+            <td></td>
+            <td class="materia" bgcolor="#C38EC7">SIS443</td>
+            <td class="materia" bgcolor="#FF69B4">SIS421</td>
+            <td class="materia" bgcolor="blue">SIS414</td>
+            <td></td>
+        </tr>
+
+        <tr>
+            <td>10:45-11:30</td>
+            <td></td>
+            <td class="materia" bgcolor="#C38EC7">SIS443</td>
+            <td class="materia" bgcolor="#FF69B4">SIS421</td>
+            <td class="materia" bgcolor="blue">SIS414</td>
+            <td></td>
+        </tr>
+
+        <tr>
+            <td>11:30-12:15</td>
+            <td></td>
+            <td class="materia" bgcolor="#C38EC7">SIS443</td>
+            <td class="materia" bgcolor="#FF69B4">SIS421</td>
+            <td></td>
+            <td></td>
+        </tr>
+
+        <tr>
+            <td>14:00-14:45</td>
+            <td></td>
+            <td></td>
+            <td class="materia" bgcolor="green">SIS416</td>
+            <td></td>
+            <td></td>
+        </tr>
+
+        <tr>
+            <td>14:45-15:30</td>
+            <td></td>
+            <td></td>
+            <td class="materia" bgcolor="green">SIS416</td>
+            <td></td>
+            <td></td>
+        </tr>
+
+        <tr>
+            <td>15:30-16:15</td>
+            <td></td>
+            <td></td>
+            <td class="materia" bgcolor="green">SIS416</td>
+            <td></td>
+            <td></td>
+        </tr>
+
+        <tr>
+            <td>16:15-17:00</td>
+            <td class="materia" bgcolor="red">SIS415</td>
+            <td class="materia" bgcolor="blue">SIS414</td>
+            <td class="materia" bgcolor="blue">SIS414</td>
+            <td class="materia" bgcolor="#C38EC7">SIS443</td>
+            <td></td>
+        </tr>
+
+        <tr>
+            <td>17:00-17:45</td>
+            <td class="materia" bgcolor="red">SIS415</td>
+            <td class="materia" bgcolor="blue">SIS414</td>
+            <td class="materia" bgcolor="blue">SIS414</td>
+            <td class="materia" bgcolor="#C38EC7">SIS443</td>
+            <td></td>
+        </tr>
+
+        <tr>
+            <td>17:45-18:30</td>
+            <td class="materia" bgcolor="red">SIS415</td>
+            <td class="materia" bgcolor="blue">SIS414</td>
+            <td class="materia" bgcolor="blue">SIS414</td>
+            <td class="materia" bgcolor="#C38EC7">SIS443</td>
+            <td></td>
+        </tr>
+    </table>
+
+    <script>
+        const materias = document.querySelectorAll("td.materia");
+        materias.forEach(celda => {
+            celda.addEventListener("mouseover", () => {
+                celda.style.transform = "scale(1.3)";
+            });
+            celda.addEventListener("mouseout", () => {
+                celda.style.transform = "scale(1)";
+            });
+        });
+
+        const dias = document.querySelectorAll("td.dia");
+        dias.forEach(celda => {
+            celda.addEventListener("mouseover", () => {
+                celda.style.transform = "scale(1.1)";
+                celda.style.backgroundColor = "#FFD700";
+                celda.style.boxShadow = "0 0 10px yellow";
+            });
+
+            celda.addEventListener("mouseout", () => {
+                celda.style.transform = "scale(1)";
+                celda.style.backgroundColor = "";
+                celda.style.boxShadow = "none";
+            });
+        });
+    </script>
+
+    <h3 id="sec3">Formularios</h3>
+
+    <form onsubmit="validar(event)">
+        <fieldset>
+            <legend>Datos personales</legend>
+
+            <label>Nombre:
+                <input type="text" id="nombre">
+            </label>
+
+            <label>Apellidos:
+                <input type="text" id="apellidos">
+            </label>
+
+            <label>Ciudad:</label>
+            <input list="ciudades" id="ciudad">
+
+            <datalist id="ciudades">
+                <option value="La Paz">
+                <option value="Cochabamba">
+                <option value="Chuquisaca">
+                <option value="Santa Cruz">
+                <option value="Potosí">
+                <option value="Tarija">
+                <option value="Oruro">
+                <option value="Pando">
+                <option value="Beni">
+            </datalist>
+
+            <div id="infoCiudad"></div>
+
+            <label>Fecha:
+                <input type="date" id="fecha">
+            </label>
+
+            <label>Hora:
+                <input type="time" id="hora">
+            </label>
+
+            <button type="submit">Enviar</button>
+        </fieldset>
+    </form>
+
+    <script>
+        function validar(e) {
+            e.preventDefault();
+
+            let nombre = document.getElementById("nombre").value;
+            let apellidos = document.getElementById("apellidos").value;
+            let ciudad = document.getElementById("ciudad").value;
+            let fecha = document.getElementById("fecha").value;
+
+            if (nombre === "" || apellidos === "" || ciudad === "" || fecha === "") {
+                alert("Por favor completa todos los campos");
+            } else {
+                alert("Bienvenido " + nombre + " " + apellidos + " de " + ciudad + " - " + fecha);
+            }
+        }
+
+        const inputCiudad = document.getElementById("ciudad");
+        const infoCiudad = document.getElementById("infoCiudad");
+
+        inputCiudad.addEventListener("input", () => {
+            const valor = inputCiudad.value.trim();
+            if (valor !== "") {
+                infoCiudad.textContent = "Has elegido: " + valor;
+                infoCiudad.classList.add("visible");
+            } else {
+                infoCiudad.textContent = "";
+                infoCiudad.classList.remove("visible");
+            }
+        });
+    </script>
+
+    <h3 id="sec4">Otros datos</h3>
+
+    <footer align="center">
+        Ingeniería de Sistema sede Tupiza <br>
+        TODOS LOS DERECHOS RESERVADOS @2025
     </footer>
+
+    <button onclick="cambiarmodo()">Cambiar modo</button>
+
+    <script>
+        function cambiarmodo() {
+            document.body.classList.toggle("oscuro");
+        }
+    </script>
+
 </body>
+
 </html>
